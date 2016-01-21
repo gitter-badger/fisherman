@@ -94,7 +94,7 @@ function __fisher_plugin -a enable name path -d "enable or disable plugins"
         set fisher_share_extensions py rb php pl awk sed
     end
 
-    for file in $path/{share/,}*.$fisher_share_extensions
+    for file in $path/{share/,functions/,}*.$fisher_share_extensions
         set -l base (basename $file)
 
         switch $file
